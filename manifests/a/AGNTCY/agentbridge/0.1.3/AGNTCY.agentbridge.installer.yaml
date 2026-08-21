@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+
+PackageIdentifier: AGNTCY.agentbridge
+PackageVersion: 0.1.3
+InstallerType: zip
+NestedInstallerType: portable
+Commands:
+- agentbridge
+ReleaseDate: 2026-08-21
+Dependencies:
+  PackageDependencies:
+  - PackageIdentifier: Microsoft.VCRedist.2015+.x64
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/agntcy/shadi/releases/download/agntcy-agentbridge-cli-v0.1.3/agentbridge-v0.1.3-x86_64-pc-windows-msvc.zip
+  InstallerSha256: D1C9BC73D4D5BCBE6D9AC897E176AF51E696B3922797541D6C1DA301B3FB81CC
+  NestedInstallerFiles:
+  - RelativeFilePath: agentbridge-v0.1.3-x86_64-pc-windows-msvc\agentbridge.exe
+    PortableCommandAlias: agentbridge
+ManifestType: installer
+ManifestVersion: 1.12.0
