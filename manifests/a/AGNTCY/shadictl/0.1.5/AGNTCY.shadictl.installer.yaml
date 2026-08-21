@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+
+PackageIdentifier: AGNTCY.shadictl
+PackageVersion: 0.1.5
+InstallerType: zip
+NestedInstallerType: portable
+Commands:
+- shadictl
+ReleaseDate: 2026-08-21
+Dependencies:
+  PackageDependencies:
+  - PackageIdentifier: Microsoft.VCRedist.2015+.x64
+  - PackageIdentifier: ShiningLight.OpenSSL.Light
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/agntcy/shadi/releases/download/agntcy-shadi-cli-v0.1.5/shadictl-v0.1.5-x86_64-pc-windows-msvc.zip
+  InstallerSha256: 246ACB4C9C35D7DEE84C792C6BF8B82FC496DBB7067EB4A8A1DEEF4F940FAC68
+  NestedInstallerFiles:
+  - RelativeFilePath: shadictl-v0.1.5-x86_64-pc-windows-msvc\shadictl.exe
+    PortableCommandAlias: shadictl
+ManifestType: installer
+ManifestVersion: 1.12.0
