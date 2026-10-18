@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+
+PackageIdentifier: AGNTCY.slimctl
+PackageVersion: 3.4.5
+InstallerType: zip
+NestedInstallerType: portable
+NestedInstallerFiles:
+- RelativeFilePath: slimctl.exe
+  PortableCommandAlias: slimctl
+Commands:
+- slimctl
+ReleaseDate: 2026-10-18
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/agntcy/slim/releases/download/slimctl-v3.4.5/slimctl-windows-amd64.zip
+  InstallerSha256: 8F710D9BFDE8F4BC615F3102C41E9A0D4127DC297B077FE93D29BACC132F4206
+  Dependencies:
+    PackageDependencies:
+    - PackageIdentifier: Microsoft.VCRedist.2015+.x64
+- Architecture: arm64
+  InstallerUrl: https://github.com/agntcy/slim/releases/download/slimctl-v3.4.5/slimctl-windows-arm64.zip
+  InstallerSha256: 3FBEBF2DBDF57A6F256E4FAD90ECB0782D1A5763930E5FF9B9522C1E698364A6
+  Dependencies:
+    PackageDependencies:
+    - PackageIdentifier: Microsoft.VCRedist.2015+.arm64
+ManifestType: installer
+ManifestVersion: 1.12.0
