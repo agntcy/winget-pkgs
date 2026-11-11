@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+
+PackageIdentifier: AGNTCY.dirctl
+PackageVersion: 1.9.0
+InstallerType: zip
+NestedInstallerType: portable
+Commands:
+- dirctl
+ReleaseDate: 2026-11-11
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/agntcy/dir/releases/download/v1.9.0/dirctl-v1.9.0-windows-amd64.zip
+  InstallerSha256: DF893464A2D4408744FBF1C1C409FA2044F48E944F35F1EC34863006E13C1372
+  NestedInstallerFiles:
+  - RelativeFilePath: dirctl.exe
+    PortableCommandAlias: dirctl
+ManifestType: installer
+ManifestVersion: 1.12.0
